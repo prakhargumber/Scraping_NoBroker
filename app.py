@@ -9,29 +9,29 @@ from pages.prop_page import PropPage
 chrome = webdriver.Chrome()
 chrome.get('https://www.nobroker.in/property/rent/gurgaon/Landmark%20Avenue?searchParam=W3sibGF0IjoyOC40NTE3NzQxLCJsb24iOjc3LjA4NjA2MjUwMDAwMDAxLCJwbGFjZUlkIjoiQ2hJSnc4WlRPTWNZRFRrUm5Hb3A3U1RqZjdvIiwicGxhY2VOYW1lIjoiTGFuZG1hcmsgQXZlbnVlIn1d&radius=7.0&sharedAccomodation=0&city=gurgaon&locality=Landmark%20Avenue&orderBy=lastUpdateDate,desc&type=BHK2&rent=5000,25000&leaseType=BACHELOR&furnishing=SEMI_FURNISHED&buildingType=AP&bathroom=2')
 
-time.sleep(60)
+time.sleep(5)
 
 last_height = chrome.execute_script("return document.body.scrollHeight")
 
-# while True:
-#     # Scroll down to bottom
-#     chrome.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-#
-#     # Wait to load page
-#     time.sleep(1)
-#
-#     # Calculate new scroll height and compare with last scroll height
-#     new_height = chrome.execute_script("return document.body.scrollHeight")
-#     if new_height == last_height:
-#         break
-#
-#     last_height = new_height
+while True:
+    # Scroll down to bottom
+    chrome.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
+    # Wait to load page
+    time.sleep(1)
+
+    # Calculate new scroll height and compare with last scroll height
+    new_height = chrome.execute_script("return document.body.scrollHeight")
+    if new_height == last_height:
+        break
+
+    last_height = new_height
 
 # chrome.execute_script("""
 #         function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
 #         let str = `div[itemtype="http://schema.org/Apartment"]`;
 #         let count = parseInt(document.getElementById('propertyCount'));
-#
+
 #         while (true){
 #             const element = document.querySelectorAll(str);
 #             if (element.length > count){break;}
@@ -39,12 +39,6 @@ last_height = chrome.execute_script("return document.body.scrollHeight")
 #             await sleep(4000);
 #         }
 # """)
-
-# response_time = page.elapsed
-# page_dt = page.headers['Date']
-
-# print(response_time)
-# print(page_dt, '\n')
 
 query = QueryPage(chrome)
 
