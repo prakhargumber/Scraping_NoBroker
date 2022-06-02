@@ -76,12 +76,10 @@ for block in query.blocks:
     non_veg.append(prop_page.non_veg)
     gated.append(prop_page.gated)
     maps_loc.append(prop_page.maps_location)
-    # print(i, '\n')
 
     # print(f'Property Area: {prop_page.sq_ft}')
     # print(f'Deposit: {prop_page.deposit}')
-    # print(f'Furnishing: {prop_page.furnishing}')
-    # print(f'maintenance: {prop_page.maintenance}')
+
     print(i, '\n')
     i += 1
 
@@ -94,4 +92,4 @@ df = pd.DataFrame(list(zip(furnish, prop_id, title, rent,
 
 file_name = "Gurugram_2bhk_Apartment_Semi_25K_7km" + ".csv"
 df.to_csv(file_name, index=False)
-print("File Exported Sucessfully!!!!")
+print("File Exported Sucessfully!")
