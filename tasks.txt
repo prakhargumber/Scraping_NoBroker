@@ -1,0 +1,13 @@
+- Debugging scroll function in JS
+
+- Repackage functions into their respective modules
+--- Module to input search params for better customization
+--- Module for testing and updation of other modules using print & selenium
+----- To test execution of chromedriver & webpage scrolling
+----- Testing locators or parsers using print
+--- Module for creating df & saving to CSV
+
+- Adding metadata fields to filename & every data output
+--- date & time
+--- time taken
+--- search params
