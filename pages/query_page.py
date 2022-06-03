@@ -7,6 +7,10 @@ class QueryPage:
         self.browser = browser
 
     @property
+    def blocks_num(self):
+        return int(self.browser.find_element_by_css_selector(QueryPageLocators.BLOCKS_NUM).text)
+
+    @property
     def blocks(self):
         return [
             BlockParser(b)

@@ -1,4 +1,4 @@
-- Debugging scroll function in JS
+\\ Debugging scroll function in JS (Completed in branch - scroll)
 
 - Repackage functions into their respective modules
 --- Module to input search params for better customization
