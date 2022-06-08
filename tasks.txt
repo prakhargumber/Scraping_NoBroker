@@ -1,10 +1,5 @@
 \\ Debugging scroll function in JS (Completed in branch - scroll)
 
-- Adding accurate location functionality
---- Passing society name as a query on Google (search or maps)
---- Recording resultant coordinates
---- Calculating distance b/w resultant coordinates and given coordinates
-
 - Repackage functions into their respective modules
 --- Module to input search params for better customization
 --- Module for testing and updation of other modules using print & selenium
@@ -19,9 +14,5 @@
 
 - Reorganize the code
 --- Correcting CSS selectors in prop page locators
---- Moving SQ_FT to Block parser (to be used as a filter)
+--- Convert(to int) & move SQ_FT to Block parser (to be used as a filter)
 --- Moving lat,long to Block parser
-
-- Adding travel time functionality
---- Calculating travel time for properties from a given location
---- Optimizing travel time to accomodate peak office hours traffic conditions
