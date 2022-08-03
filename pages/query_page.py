@@ -12,9 +12,8 @@ class QueryPage:
 
     @property
     def blocks(self):
-        return [
-            BlockParser(b)
-            for b in self.browser.find_elements_by_css_selector(
-                QueryPageLocators.BLOCK
-            )
-        ]
+        return [BlockParser(b)
+                for count, b in enumerate(self.browser.find_elements_by_css_selector(
+                    QueryPageLocators.BLOCK))
+                if count < int(self.browser.find_element_by_css_selector(
+                    QueryPageLocators.BLOCKS_NUM).text)]
