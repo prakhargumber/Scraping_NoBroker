@@ -1,5 +1,5 @@
 class PropLocators:
-    MAINTAIN = '.nb__1B3pI > span:nth-child(2) > div:nth-child(1)' # text
+    MAINTAIN = '.nb__1B3pI > span:nth-child(2) > div:nth-child(1)'  # text
     SQ_FT = '.nb__3NQGb'  # text
     DEPOSIT = '.nb__3WuLH > span:nth-child(3)'  # text
     AGE = 'div.nb__3Z_gh:nth-child(6) > div:nth-child(2) > span:nth-child(1) > h4:nth-child(1)'  # text

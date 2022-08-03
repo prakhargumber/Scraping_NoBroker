@@ -1,4 +1,5 @@
 import re
+import numpy as np
 from locators.block_locators import BlockLocators
 
 
@@ -8,7 +9,7 @@ class BlockParser:
 
     @property
     def id(self):
-        return self.block.get_attribute('id')
+        return str(self.block.get_attribute('id'))
 
     @property
     def title(self):
@@ -19,7 +20,10 @@ class BlockParser:
         rent_maintenance = self.block.find_element_by_css_selector(BlockLocators.RENT_M).text
         regex = '([0-9,]+)'
         match = re.findall(regex, rent_maintenance)
-        amount = int(match[0].replace(',', ''))
+        try:
+            amount = int(match[0].replace(',', ''))
+        except IndexError:
+            amount = np.nan  # To account for any text value present inplace of the amount
         return amount
 
     @property
@@ -28,9 +32,8 @@ class BlockParser:
 
     @property
     def possession(self):
-        return str(self.block.find_element_by_css_selector(BlockLocators.POSSESS).text)
+        return str(self.block.find_element_by_css_selector(BlockLocators.POSSESS).text)  # Date format
 
     @property
     def link(self):
-        return self.block.find_element_by_css_selector(BlockLocators.LINK).get_attribute('href')
-
+        return str(self.block.find_element_by_css_selector(BlockLocators.LINK).get_attribute('href'))

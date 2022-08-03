@@ -18,12 +18,12 @@ class PropParser:
         return amount
 
     @property
-    def sq_ft(self):
+    def sq_ft(self):  # int
         return str(self.soup.select_one(PropLocators.SQ_FT).text)
 
-    @property
+    '''@property
     def deposit(self):  # int
-        return str(self.soup.select_one(PropLocators.DEPOSIT).text).strip()
+        return str(self.soup.select_one(PropLocators.DEPOSIT).text).strip()'''
 
     @property
     def age(self):  # categorical
@@ -39,7 +39,7 @@ class PropParser:
 
     @property
     def floor(self):  # categorical
-        return self.soup.select_one(PropLocators.FLOOR).text
+        return str(self.soup.select_one(PropLocators.FLOOR).text)
 
     @property
     def non_veg(self):  # categorical
@@ -50,7 +50,7 @@ class PropParser:
         return str(self.soup.select_one(PropLocators.GATED).text)
 
     @property
-    def maps_location(self):
+    def maps_location(self):  # str
         lat = str(self.soup.select_one(PropLocators.LATITUDE).attrs['content'])
         long = str(self.soup.select_one(PropLocators.LONGITUDE).attrs['content'])
         return f'https://maps.google.com/?q={lat},{long}'

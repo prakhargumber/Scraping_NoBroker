@@ -1,18 +1,22 @@
-\\ Debugging scroll function in JS (Completed in branch - scroll)
-
-- Repackage functions into their respective modules
---- Module to input search params for better customization
---- Module for testing and updation of other modules using print & selenium
------ To test execution of chromedriver & webpage scrolling
------ Testing locators or parsers using print
---- Module for creating df & saving to CSV
-
-- Adding metadata fields to filename & every data output
---- date & time
---- time taken
---- search params
+- Apply regex
+--- Fix deposit, negotiation, floor, and sq_ft
 
 - Reorganize the code
 --- Correcting CSS selectors in prop page locators
---- Convert(to int) & move SQ_FT to Block parser (to be used as a filter)
---- Moving lat,long to Block parser
+--- Parsing data as per requirement (sq_ft, floor, posted_on, possession)
+----- Move SQ_FT to Block parser (to be used as a filter)
+
+- Repackage functions into their respective modules
+--- Module to input search params for better customization
+--- Module for creating df & saving to CSV
+--- Module for testing and updation of other modules using print & selenium
+----- To test execution of chromedriver & webpage scrolling
+----- Testing locators or parsers using print
+
+- Adding views functionality
+--- Customize output using different recorded parameters and filters
+--- Save functionality as per requirement
+
+\\ Increasing code efficiency (storage and process time) (in branch - cleancode)
+
+\\ Debugging scroll function in JS (Completed in branch - scroll)
