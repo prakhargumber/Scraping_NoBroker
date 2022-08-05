@@ -1,4 +1,4 @@
-# Scraping Real Estate data from NoBroker (WIP)
+# Scraping Real Estate data from NoBroker
 ![nobroker_img](https://assets.nobroker.in/static/img/logos/nb_logo_new_trans.svg "NoBroker logo")
 
 Building a Web Scraper with Python to parse and save live real-estate property data hosted on nobroker.in
