@@ -9,7 +9,7 @@ Have a look at the [output file](csv_datasets/Gurugram_3bhk_AP_46K_6.5km_03_08.c
 
 Navigation:
 
-/locators - Find CSS selectors used to scrape specific elements from different pages of the website
+/locators - CSS selectors used to scrape specific elements from different pages of the website
 
 /parsers - To parse each property listing information as a block
 
