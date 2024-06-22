@@ -9,10 +9,10 @@ Have a look at the [output file](csv_datasets/Gurugram_3bhk_AP_46K_6.5km_03_08.c
 
 Navigation:
 
-/locators - CSS selectors used to scrape specific elements from different pages of the website
+[/locators](https://github.com/prakhargumber/Scraping_NoBroker/tree/main/locators) - CSS selectors used to scrape specific elements from different pages of the website
 
-/parsers - To parse each property listing information as a block
+[/parsers](https://github.com/prakhargumber/Scraping_NoBroker/tree/main/pages) - To parse each property listing information as a block
 
-/pages - To input html content of a webpage and parse it using parsers
+[/pages](https://github.com/prakhargumber/Scraping_NoBroker/tree/main/pages) - To input html content of a webpage and parse it using parsers
 
-app.py - Scraper to scroll through the webpage and implement objects to output a csv file containing clean scraped data
+[app.py](https://github.com/prakhargumber/Scraping_NoBroker/blob/main/app.py) - Scraper to scroll through the webpage and implement objects to output a csv file containing clean scraped data
